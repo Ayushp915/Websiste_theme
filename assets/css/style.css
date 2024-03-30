@@ -1,3 +1,35 @@
+/* Initial color of the SVG */
+#header .logo svg {
+  fill: #fff; /* Change to your desired initial color */
+}
+
+/* Change color of the SVG when it's hovered over */
+#header .logo svg:hover path {
+  fill: #0078ff; /* Change to your desired color */
+}
+
+/* Change color of the SVG when the page is scrolled */
+#header .logo.logo-scrolled svg path {
+  fill: #fff; /* Change to your desired color */
+}
+
+
+/* Initial color of the icon */
+.mobile-nav-toggle {
+  color: #fff ; /* Change to your desired initial color */
+}
+
+/* Change color of the icon when it's hovered over */
+.mobile-nav-toggle:hover {
+  color: #0078ff; /* Change to your desired color */
+}
+
+/* Change color of the icon when the page is scrolled */
+.mobile-nav-toggle.mobile-nav-toggle-scrolled {
+  color: #fff; /* Change to your desired color */
+}
+
+
 .hero-content{
   pointer-events: none;
 }
@@ -502,13 +534,22 @@ a:hover {
 
 #header .logo a {
   color: #fff;
+  
 }
 
-#header .logo img {
+#header .logo img,#header .logo svg {
   max-height: 40px;
+  width: auto;
 }
-.logo img {
+.logo img,.logo svg {
   scale: 3.5;
+  
+}
+@media (max-width:767px) {
+  .logo img,.logo svg {
+    padding-left: 0.5rem;
+  }
+  
 }
 
 #header.header-scrolled {
@@ -575,9 +616,13 @@ a:hover {
   bottom: -6px;
   left: 0;
   width: 0;
-  background-color: #fff;
+  background-color: #0078ff;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
+}
+/* Adjusted style when navbar-scrolled class is present */
+.navbar-scrolled>ul>li>a:before {
+  background-color: #fff; /* Change to your desired background color when scrolled */
 }
 
 .navbar a:hover:before,
@@ -814,10 +859,21 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+
   .hero .hero-title {
     font-size: 4.5rem;
   }
+
+  .hero .hero-content {
+    text-align: center;
+    margin: auto;
+  }
 }
+
 
 .hero .hero-subtitle {
   font-size: 1.5rem;
