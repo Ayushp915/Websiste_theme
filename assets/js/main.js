@@ -359,6 +359,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "retina_detect": true
   });
 
+  
+
 }, false);
 
 var swiper = new Swiper('.skills-swiper-container', {
@@ -413,3 +415,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Clears form when returned
+window.onload = function() {
+    // Reset the form fields when the page loads
+    document.getElementById("contact-from").reset();
+};

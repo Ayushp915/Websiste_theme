@@ -1,38 +1,53 @@
-/* Initial color of the SVG */
-#header .logo svg {
-  fill: #fff; /* Change to your desired initial color */
+:root {
+  --main-blue: #0078ff; /* Define initial color as blue */
+  --main-white: #fff;
 }
-
-/* Change color of the SVG when it's hovered over */
-#header .logo svg:hover path {
-  fill: #0078ff; /* Change to your desired color */
-}
-
-/* Change color of the SVG when the page is scrolled */
-#header .logo.logo-scrolled svg path {
-  fill: #fff; /* Change to your desired color */
-}
-
-
-/* Initial color of the icon */
+/* Common styles */
+#header .logo svg,
 .mobile-nav-toggle {
-  color: #fff ; /* Change to your desired initial color */
+  color: var(--main-white); /* Default initial color */
+  fill: var(--main-white);
 }
 
-/* Change color of the icon when it's hovered over */
+/* Specific styles for  */
+#header .logo svg:hover path,
 .mobile-nav-toggle:hover {
-  color: #0078ff; /* Change to your desired color */
+  color: var(--main-white); /* Change to your desired color */
+  fill: var(--main-white);
 }
 
-/* Change color of the icon when the page is scrolled */
+#header .logo.logo-scrolled svg path,
 .mobile-nav-toggle.mobile-nav-toggle-scrolled {
-  color: #fff; /* Change to your desired color */
+  color: var(--main-white); /* Change to your desired color */
+  fill: var(--main-white);
 }
 
+/* Media query */
+@media (max-width: 768px) {
+  /* Specific styles for  */
+  #header .logo svg,
+  .mobile-nav-toggle {
+    color:var(--main-white); /* Change to your desired initial color */
+    fill: var(--main-white);
+  }
 
-.hero-content{
+  #header .logo svg,
+  .mobile-nav-toggle {
+    color: var(--main-blue); /* Reset color to initial color */
+    fill: var(--main-blue);
+  }
+
+  
+}
+
+#header,.hero-content{
   pointer-events: none;
 }
+
+.logo,.navbar,.breadcrumb-item{
+  pointer-events: auto;
+}
+
 
 .box-shadow-full-skill {
   padding: 1rem 0.25rem;
@@ -94,13 +109,13 @@ h6 {
 a {
   color: #1e1e1e;
   text-decoration: none;
-  transition: all 500ms ease-in-out;
+  transition: all 0.3s;
 }
 
 a:hover {
   color: #0078ff;
   text-decoration: none;
-  transition: all 500ms ease-in-out;
+  transition: all 0.3s;
 }
 
 .p-r {
@@ -166,6 +181,8 @@ a:hover {
     background-attachment: scroll;
   }
 }
+
+
 
 .overlay-mf {
   background-color: #0078ff;
@@ -519,7 +536,7 @@ a:hover {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   z-index: 997;
   padding: 20px 0;
 }
@@ -595,7 +612,7 @@ a:hover {
   font-weight: 600;
   padding: 0;
   white-space: nowrap;
-  transition: 0.3s;
+  /* transition: 0.3s; */
   letter-spacing: 0.4px;
   position: relative;
   text-transform: uppercase;
@@ -618,7 +635,7 @@ a:hover {
   width: 0;
   background-color: #0078ff;
   visibility: hidden;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out;
 }
 /* Adjusted style when navbar-scrolled class is present */
 .navbar-scrolled>ul>li>a:before {
@@ -708,12 +725,12 @@ a:hover {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  /* color: #fff; */
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 @media (max-width: 991px) {
@@ -856,6 +873,7 @@ a:hover {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
+  padding-top: 4rem; 
 }
 
 @media (min-width: 768px) {
@@ -866,6 +884,7 @@ a:hover {
 
   .hero .hero-title {
     font-size: 4.5rem;
+    
   }
 
   .hero .hero-content {
@@ -891,7 +910,7 @@ a:hover {
 }
 
 .hero-single {
-  height: 350px;
+  height: 250px;
 }
 
 .hero-single .hero-content {
