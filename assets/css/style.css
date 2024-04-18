@@ -2,6 +2,15 @@
   --main-blue: #0078ff; /* Define initial color as blue */
   --main-white: #fff;
 }
+
+
+.col-9:hover .education-name {
+  color: var(--main-blue);
+}
+
+
+
+
 /* Common styles */
 #header .logo svg,
 .mobile-nav-toggle {
@@ -12,8 +21,8 @@
 /* Specific styles for  */
 #header .logo svg:hover path,
 .mobile-nav-toggle:hover {
-  color: var(--main-white); /* Change to your desired color */
-  fill: var(--main-white);
+  color: var(--main-blue); /* Change to your desired color */
+  fill: var(--main-blue);
 }
 
 #header .logo.logo-scrolled svg path,
@@ -28,6 +37,11 @@
   #header .logo svg,
   .mobile-nav-toggle {
     color:var(--main-white); /* Change to your desired initial color */
+    fill: var(--main-white);
+  }
+  #header .logo svg:hover path,
+  .mobile-nav-toggle:hover {
+    color: var(--main-white); /* Change to your desired color */
     fill: var(--main-white);
   }
 
@@ -50,7 +64,8 @@
 
 
 .box-shadow-full-skill {
-  padding: 1rem 0.25rem;
+  padding: 1rem 0.5rem;
+  margin: 1rem;
   position: relative;
   background-color: #fff;
   /* margin-bottom: 1.5rem; */
@@ -313,9 +328,20 @@ a:hover {
   font-size: 1.5rem;
   border-radius: 50%;
   line-height: 1.6;
-  margin: 0 15px 0 0;
+  margin: 15px 15px 0 0;
   box-shadow: 0 0 0 3px #0078ff;
   transition: all 500ms ease;
+  
+}
+@media (max-width: 450px) {
+  .socials .ico-circle {
+    
+    font-size: 1.4rem;
+    
+    line-height: 1.77;
+    
+    
+  }
 }
 
 .socials .ico-circle:hover {
@@ -324,6 +350,8 @@ a:hover {
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
 }
+
+
 
 /*------/ Ul resect /------*/
 .ul-resect,
@@ -781,7 +809,7 @@ a:hover {
 .navbar-mobile a:hover:before,
 .navbar-mobile li:hover>a:before,
 .navbar-mobile .active:before {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .navbar-mobile a,
@@ -873,7 +901,7 @@ a:hover {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
-  padding-top: 4rem; 
+  padding-top: 3rem; 
 }
 
 @media (min-width: 768px) {
@@ -890,6 +918,7 @@ a:hover {
   .hero .hero-content {
     text-align: center;
     margin: auto;
+    
   }
 }
 
@@ -910,7 +939,7 @@ a:hover {
 }
 
 .hero-single {
-  height: 250px;
+  height: 275px;
 }
 
 .hero-single .hero-content {
@@ -931,6 +960,7 @@ a:hover {
 .hero-single .breadcrumb {
   background-color: transparent;
   color: #0078ff;
+  
 }
 
 .hero-single .breadcrumb .breadcrumb-item:before {

@@ -115,6 +115,8 @@
     this.classList.toggle('bi-x')
   })
 
+  
+
   /**
    * Mobile nav dropdowns activate
    */
@@ -202,7 +204,7 @@
     speed: 400,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 2500,
       disableOnInteraction: false
     },
     pagination: {
@@ -211,6 +213,9 @@
       clickable: true
     }
   });
+
+ 
+
 
   /**
    * Preloader
@@ -391,7 +396,7 @@ var swiper = new Swiper('.skills-swiper-container', {
 
 window.addEventListener('scroll', function() {
   var navToggleIcon = document.querySelector('.mobile-nav-toggle');
-  if (window.scrollY > 50) {
+  if (window.scrollY > 130) {
       navToggleIcon.classList.add('mobile-nav-toggle-scrolled');
   } else {
       navToggleIcon.classList.remove('mobile-nav-toggle-scrolled');
@@ -400,7 +405,7 @@ window.addEventListener('scroll', function() {
 
 
   var logoScroll = document.querySelector('.logo');
-  if (window.scrollY > 50) {
+  if (window.scrollY > 130) {
     logoScroll.classList.add('logo-scrolled');
   } else {
     logoScroll.classList.remove('logo-scrolled');
@@ -419,4 +424,8 @@ window.addEventListener('scroll', function() {
 window.onload = function() {
     // Reset the form fields when the page loads
     document.getElementById("contact-from").reset();
+    window.dispatchEvent(new Event('scroll'));
+    
+    
 };
+
